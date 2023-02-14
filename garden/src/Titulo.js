@@ -1,7 +1,9 @@
 import React from 'react';
 
-const titulo = () =>{
+export const titulo = () =>{
     return(
         <h1>Titulo</h1>
     )
 }
+
+
