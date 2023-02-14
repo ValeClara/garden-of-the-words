@@ -1,0 +1,21 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    width: 80px;
+
+}
+
+h1{
+    color: red;
+
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Estilo con JS -objetos- en la carpeta de navbar.js*/
