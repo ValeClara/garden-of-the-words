@@ -17,7 +17,7 @@ const Navbar = (children) => {
       <NavCategories />
 
       <CartWidget />
-
+    
       {/* map siempre va a recibir un solo parámetro y es una función flecha.
             El map me va a permitir renderizar una lista de cosas */}
       {/* {children} */}
