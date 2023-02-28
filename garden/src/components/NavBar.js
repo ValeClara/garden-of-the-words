@@ -14,7 +14,10 @@ const Navbar = (children) => {
     <header style={style.container}>
       {/* <Link style={styles.imagenes} to={"/"}></Link> */}
       <img src={icon} alt="icono de la tienda" width='50' />
+      
+      <Link to={"/"} style={{textDecoration: 'none', color: 'green'}}>
       <h1>Garden of the Words</h1>
+      </Link>
 
       <NavCategories />
 

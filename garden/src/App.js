@@ -14,24 +14,19 @@ const App = () =>
   //const [show, setShow] = useState(true);
 
   const userName = "Lola";
-  const greeting = 'comprador'
+  const greeting = 'Bienvenidos'
 
-  /*const unMensaje = (mensaje) => {
-    console.log(mensaje);
-  }*/
-
+ 
   return (
     <>
     {/* <NavBar />
     <ItemListContainer greeting = {greeting}/> */}
-    {/* <ComponenteDeEstados mensaje={unMensaje}/> */}
-    {/* <Users/> */}
-
+    
     {/*show ? <ComponenteDeEstados /> : <h1>No hay nada</h1>
       <button onClick={()=>{setShow(!show)}}>Alternar</button>*/}
 
 <BrowserRouter>
-        <Navbar name={userName} />
+        <NavBar name={userName} />
         <Routes>
           <Route path="/" element={<ItemListContainer greeting={greeting} />} />
 
@@ -46,8 +41,6 @@ const App = () =>
           />
 
           <Route path="/cart" element={<Cart />} />
-
-
         </Routes>
       </BrowserRouter>
     </>
