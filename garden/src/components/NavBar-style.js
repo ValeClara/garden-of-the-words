@@ -1,7 +1,7 @@
-const viewport = {
-    width: document.documentElement.clientWidth,
-    height: document.documentElement.clientHeight,
-  };
+    // const viewport = {
+    //     width: document.documentElement.clientWidth,
+    //     height: document.documentElement.clientHeight,
+    //   };
   
 export const style = {
     container: {
