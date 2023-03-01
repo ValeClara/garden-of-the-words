@@ -13,19 +13,18 @@ const Navbar = (children) => {
   return (
     <header style={style.container}>
       {/* <Link style={styles.imagenes} to={"/"}></Link> */}
-      <img src={icon} alt="icono de la tienda" width='50' />
-      
-      <Link to={"/"} style={{textDecoration: 'none', color: 'green'}}>
-      <h1>Garden of the Words</h1>
+      <img src={icon} alt="icono de la tienda" width="50" />
+
+      <Link to={"/"} style={{ textDecoration: "none", color: "green" }}>
+        <h1>Garden of the Words</h1>
       </Link>
 
       <NavCategories />
 
-      {/* <CartWidget /> */}
       <Link to={"/cart"}>
         <CartWidget />
       </Link>
-    
+
       {/* map siempre va a recibir un solo parámetro y es una función flecha.
             El map me va a permitir renderizar una lista de cosas */}
       {/* {children} */}

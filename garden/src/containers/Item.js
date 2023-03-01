@@ -10,10 +10,6 @@ import {
 } from "@mui/material";
 import {Link} from 'react-router-dom'
 
-// const viewport = {
-//     width: document.documentElement.clientWidth,
-//     height: document.documentElement.clientHeight,
-//   };
 
 const Item = ({product}) => {
   return (
@@ -55,11 +51,6 @@ const Item = ({product}) => {
   )
 };
 
-// const style = {
-//     container:{
-//         width: viewport.width > 900 ? '30%' : '90%',  
-//     }
-// }
 
 const styles = {
   container: {

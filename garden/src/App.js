@@ -19,13 +19,7 @@ const App = () =>
  
   return (
     <>
-    {/* <NavBar />
-    <ItemListContainer greeting = {greeting}/> */}
-    
-    {/*show ? <ComponenteDeEstados /> : <h1>No hay nada</h1>
-      <button onClick={()=>{setShow(!show)}}>Alternar</button>*/}
-
-<BrowserRouter>
+    <BrowserRouter>
         <NavBar name={userName} />
         <Routes>
           <Route path="/" element={<ItemListContainer greeting={greeting} />} />

@@ -5,7 +5,6 @@ const ComponenteDeEstados = () => {
   const [numero, setNumero] = useState(0);
 
   useEffect(() => {
-    //console.log("montaje y actualizacion");
     setNumero(numero + 1);
 
     /*setTimeout(()=>{
@@ -21,7 +20,6 @@ const ComponenteDeEstados = () => {
     };
   }, []);
 
-  //console.log("constructor");
 
   const handlerAdd = () => {
     setCount(count + 1);
@@ -32,7 +30,6 @@ const ComponenteDeEstados = () => {
   };
   const handlerReset = () => {
     setCount(0);
-    //mensaje("este mensaje va dsde componente de estados");
   };
 
   return (
