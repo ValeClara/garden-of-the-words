@@ -1,15 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
-
-  
-  // const queryProducts = new Promise((res, rej) => {
-  //   setTimeout(() => {
-  //     res(initialProducts);
-  //   }, 3000);
-  //   //rej("hay un error");
-  // });
-
+import { db } from "./../firebase/firebase";
+import { getDocs, collection, query, where } from "firebase/firestore";
 
 export const ItemListContainer = (props) => {
     
@@ -17,10 +10,32 @@ export const ItemListContainer = (props) => {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(false);
     const { name } = useParams();
-    const URL = `https://fakestoreapi.com/products/category/${name}`;
 
 
   useEffect(() => {
+
+    const productsCollection = collection(db, "products");
+    const q = name
+      ? query(productsCollection, where("category", "==", name))
+      : productsCollection;
+
+      getDocs(q)
+      .then((data) => {
+        const list = data.docs.map((product) => {
+          return {
+            ...product.data(),
+            id: product.id,
+          };
+        });
+        setProducts(list);
+      })
+      .catch(() => {
+        setError(true);
+      });
+
+    /*const URL = name
+      ? `https://fakestoreapi.com/products/category/${name}`
+      : "https://fakestoreapi.com/products";
     
 
     const getProducts = async () => {
@@ -34,13 +49,10 @@ export const ItemListContainer = (props) => {
       }
     };
 
-    getProducts();
+    getProducts();*/
   }, [name]);
 
-  const onAdd = (count) => {
-    console.log(`el usuario selecciono ${count} `);
-  };
-
+  
   return (
     <>
       <h1>{props.greeting}</h1>
