@@ -2,14 +2,15 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDNFGagD5_GJ1fFS2Jd91WBul0TME0Ak9w",
-  authDomain: "reactcomision45105.firebaseapp.com",
-  projectId: "reactcomision45105",
-  storageBucket: "reactcomision45105.appspot.com",
-  messagingSenderId: "454299897820",
-  appId: "1:454299897820:web:60ddb08e7c67c9f42a4919"
+  apiKey: "AIzaSyBP-oK9nDXrnzRb3VBYan00Ah7Ik6N1AkI",
+  authDomain: "tp-react-matosvaleria.firebaseapp.com",
+  projectId: "tp-react-matosvaleria",
+  storageBucket: "tp-react-matosvaleria.appspot.com",
+  messagingSenderId: "40261320088",
+  appId: "1:40261320088:web:29d70fe00ef5d9e7c23fed"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
